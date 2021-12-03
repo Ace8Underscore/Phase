@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.ace.phase.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "phase.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "TitleScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
