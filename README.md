@@ -5,4 +5,6 @@ wanted to code so i decided i would make my own custom base client supporting ne
 This client is 100% custom base and its going to stay that way not going to be another cousinware where its 75% skid.
 
 
-*HOW DO I RUN??!?!*
+##HOW DO I RUN??!?!
+its pretty simple just copy the gitlink and paste it into your ide
+Just make sure your using java 17 or you will run into many issues
