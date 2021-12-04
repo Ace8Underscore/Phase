@@ -6,6 +6,8 @@ import net.minecraft.client.KeyboardHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 
+import java.util.ArrayList;
+
 public class Module {
 
     public final Minecraft mc = Minecraft.getInstance();
@@ -36,7 +38,7 @@ public class Module {
         ChatManager.sendHotBarChat(ChatFormatting.GREEN + this.getName() + " Was Enabled");
     }
 
-    public void onDisbale() {
+    public void onDisable() {
         MinecraftForge.EVENT_BUS.unregister(this);
         ChatManager.sendHotBarChat(ChatFormatting.RED + this.getName() + " Was Disabled");
     }
@@ -48,7 +50,7 @@ public class Module {
 
     public void disable() {
         this.isEnabled = false;
-        this.onDisbale();
+        this.onDisable();
     }
 
     public void toggle() {
@@ -68,9 +70,12 @@ public class Module {
 
     public void setBindKeyCode(int bindKeyCode) {this.bindKeyCode = bindKeyCode;}
 
+    public Category getCategory() {return this.category;}
+
 
     public static enum Category {
         COMBAT,
+        GUI,
         MISC,
     }
 

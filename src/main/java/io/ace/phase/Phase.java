@@ -1,6 +1,7 @@
 package io.ace.phase;
 
 import io.ace.phase.event.LaunchEvent;
+import io.ace.phase.gui.Gui;
 import io.ace.phase.manager.BindManager;
 import io.ace.phase.manager.ChatManager;
 import io.ace.phase.manager.ModuleManager;
@@ -28,6 +29,7 @@ public class Phase {
     public static ModuleManager moduleManager;
     public static ChatManager chatManager;
     public static BindManager bindManager;
+    public static Gui gui;
 
     public Phase() {
         // Register the setup method for modloading
@@ -43,6 +45,7 @@ public class Phase {
         moduleManager = new ModuleManager();
         launchEvent = new LaunchEvent();
         chatManager = new ChatManager();
+        gui = new Gui();
     }
 
 
